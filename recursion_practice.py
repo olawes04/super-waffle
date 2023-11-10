@@ -1,6 +1,6 @@
 import time
 
-#Converts a positive number to a binary represented as a list of 0s and 1s.
+"""#Converts a positive number to a binary represented as a list of 0s and 1s.
 #using the algorithm of divide by 2 and put the remainder in the small column then start again with the quotient as input
 def pos_dec_to_binary(decimal,bit_list):
     if decimal<=1:
@@ -8,13 +8,18 @@ def pos_dec_to_binary(decimal,bit_list):
         return list(reversed(bit_list))
     else:
         bit_list.append(decimal%2)
-        return pos_dec_to_binary(decimal//2,bit_list)
+        return pos_dec_to_binary(decimal//2,bit_list)""" 
     
 #why does this not work? Fix it!
 def countdown(number):
-    print(number)
-    time.sleep(1)
-    countdown(number-1)
+
+    if number<=-1:
+        return 1
+    else:
+        print(number)
+        time.sleep(1)
+        countdown(number-1)
+
 
 
 #try to complete this
@@ -24,6 +29,8 @@ def fibonacci(n):
         return 0
     elif n == 1:
         return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
     #recursive case: the fibonacci number is the sum of the previous 2
 
 #triangular numbers
@@ -79,7 +86,7 @@ If p > q, the gcd of p and q is the same as the gcd of q and p % q."""
 #print(pos_dec_to_binary(1234,[]))
 ##or, neater (using a generator expression (outside scope of A-level CS))
 #print("".join(str(i) for i in pos_dec_to_binary(1234,[])))
-#
+print(fibonacci(10))
 #print (factorial(4))
 #countdown(10)
 #print(binary_search_recursive([1,2,3,4,54,56,58],0,6,1))
