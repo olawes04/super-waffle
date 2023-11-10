@@ -35,9 +35,11 @@ def fibonacci(n):
 
 #triangular numbers
 def triangular(n):
-    #base case
-    #recursive case
-    pass
+    if n==1:
+        return 1
+    else:
+        return(n+triangular(n-1))
+
 
 #try to complete this
 def factorial(input_number):
@@ -86,7 +88,8 @@ If p > q, the gcd of p and q is the same as the gcd of q and p % q."""
 #print(pos_dec_to_binary(1234,[]))
 ##or, neater (using a generator expression (outside scope of A-level CS))
 #print("".join(str(i) for i in pos_dec_to_binary(1234,[])))
-print(fibonacci(10))
+#print(fibonacci(10))
 #print (factorial(4))
 #countdown(10)
 #print(binary_search_recursive([1,2,3,4,54,56,58],0,6,1))
+print(triangular(12))
